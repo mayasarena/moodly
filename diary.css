@@ -1,0 +1,79 @@
+.sticker {
+    width: 50px;
+    height: 50px;
+    background-color: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+.sticker-container {
+    top: 20vh;
+    left: 10vw;
+    position: fixed;
+    padding: 10px;
+    width: 150px;
+    display: none;
+    filter: drop-shadow(4px 4px 0px #ced4da);
+    background-color: white;
+    border-radius: 30px;
+    z-index: 3;
+}
+
+.sticker-drop {
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+.mood-description {
+    padding: 5px;
+}
+
+.notes {
+    padding: 5px;
+}
+
+.content-container {
+    height: 300px;
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 30px 20px 20px 10px;
+    filter: drop-shadow(4px 4px 0px #ced4da);
+    border-radius: 30px;
+}
+
+#garbage {
+    position: fixed;
+    top: 303px;
+    left: 48px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    z-index: 5;
+}
+
+#garbage-image {
+    position: fixed;
+    top: 310px;
+    left: 55px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    z-index: 1;
+}
+
+.hover-over {
+    border: 1px dashed grey;
+}
+
+#toggle {
+    position: absolute;
+    right: 50px;
+    top: 100px;
+}

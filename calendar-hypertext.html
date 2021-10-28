@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--- importing stylesheets --->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type ="text/css" href="style.css">
+    <link rel="stylesheet" type ="text/css" href="calendar.css">
+    <link rel="stylesheet" type="text/css" href="fullcalendar/lib/main.min.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Moodly Prototypes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="calendar-dirman.html">Direct Manipulation Calendar</a>
+          <a class="nav-item nav-link active" href="calendar-hypertext.html">Hypertext Calendar <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="diary-dirman.html">Direct Manipulation Diary</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="fullWindow" class="fullWindow">
+        <h1>Add a New Entry</h1>
+        <br>
+        <div id="displayMood">
+          <i class="fas fa-sad-cry fa-5x" style="color: #264653" id="moodCol"></i>
+        </div>
+        <br>
+        Date:
+        <br>
+        <input type="date" id="inputDate" style="border: 1px solid #adb5bd;">
+        <br><br>
+        Notes:
+        <br>
+        <textarea id="textarea" style="position: relative; width: 230px; height: 100px; 
+          border-radius: 6px; border: 1px solid #adb5bd; padding: 5px;"></textarea>
+        <br><br>
+        <button type="button" class="btn btn-light" style="border: 1px solid #ced4da;" id="okButton">Ok</button> 
+        <button type="button" class="btn btn-light" style="border: 1px solid #ced4da;" id="cancelButton">Cancel</button> 
+      </div>
+      <span id="title"></span>
+        <div id='external-events'>
+            <h4>How are you feeling?</h4>
+            <div id='external-events-list'>
+            <div class="d-flex justify-content-between" style="margin-left: 30px; margin-right: 30px;">
+                <button onclick="openWindow(1)" class="moodButton">
+                <div style="color: #264653; text-align: center; text-decoration: underline;">
+                  <i class="fas fa-sad-cry fa-3x"></i>
+                  <br>
+                  Miserable
+                </div>
+                </button>
+                <button onclick="openWindow(2)" class="moodButton">
+                  <div style="color: #2a9d8f; text-align: center; text-decoration: underline;">
+                    <i class="fas fa-frown fa-3x"></i>
+                    <br>
+                    Sad
+                  </div>
+                </button>
+                <button onclick="openWindow(3)" class="moodButton">
+                  <div style="color: #e9c46a; text-align: center; text-decoration: underline;">
+                    <i class="fas fa-meh fa-3x"></i>
+                    <br>
+                    Neutral
+                  </div>
+                </button>
+                <button onclick="openWindow(4)" class="moodButton">
+                  <div style="color: #f4a261; text-align: center; text-decoration: underline;">
+                    <i class="fas fa-smile fa-3x"></i>
+                    <br>
+                    Happy
+                  </div>
+                </button>
+                <button onclick="openWindow(5)" class="moodButton">
+                  <div style="color: #e76f51; text-align: center; text-decoration: underline;">
+                    <i class="fas fa-laugh-beam fa-3x"></i>
+                    <br>
+                    Ecstatic
+                  </div>
+                </button>
+            </div>
+            </div>
+        </div>
+        
+            <div id='calendar-wrap'>
+                <div id='calendar'></div>
+            </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="calendar-hypertext.js"></script>
+    <script src="fullcalendar/lib/main.min.js"></script>
+    <script src="https://kit.fontawesome.com/5ab37e5eb9.js" crossorigin="anonymous"></script>
+  </body>
+</html>

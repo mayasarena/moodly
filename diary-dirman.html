@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--- importing stylesheets --->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type ="text/css" href="style.css">
+    <link rel="stylesheet" type ="text/css" href="diary.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Moodly Prototypes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="calendar-dirman.html">Direct Manipulation Calendar</a>
+          <a class="nav-item nav-link" href="calendar-hypertext.html">Hypertext Calendar</a>
+          <a class="nav-item nav-link active" href="diary-dirman.html">Direct Manipulation Diary <span class="sr-only">(current)</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <button type="button" class="btn btn-outline-dark" id="toggle">Toggle Editing Mode On/Off</button>
+
+    <div class="sticker-container" id="sticker-container">
+      <div class="d-flex flex-column">
+        <div style="text-align: center;"><b>Stickers</b></div>
+        <div class="d-flex justify-content-between">
+          <div>
+            <i class="fas fa-pizza-slice fa-2x sticker" style="color: #f94144;" ondragstart="drag(event)" id="sticker1" draggable="true"></i>
+            <i class="fas fa-rainbow fa-2x sticker" style="color: #f8961e;" ondragstart="drag(event)" id="sticker2" draggable="true"></i>
+            <i class="fas fa-sun fa-2x sticker" style="color: #90be6d;" ondragstart="drag(event)" id="sticker3" draggable="true"></i>
+            <i class="fas fa-tree fa-2x sticker" style="color: #43858B;" ondragstart="drag(event)" id="sticker4" draggable="true"></i>
+          </div>
+          <div>
+            <i class="fas fa-star fa-2x sticker" style="color: #f3722c;" ondragstart="drag(event)" id="sticker5" draggable="true"></i>
+            <i class="fas fa-heart fa-2x sticker" style="color: #f9c74f;" ondragstart="drag(event)" id="sticker6" draggable="true"></i>
+            <i class="fas fa-cat fa-2x sticker" style="color: #43aa8b;" ondragstart="drag(event)" id="sticker7" draggable="true"></i>
+            <i class="fas fa-ghost fa-2x sticker" style="color: #577590;" ondragstart="drag(event)" id="sticker8" draggable="true"></i>
+          </div>
+        </div>
+      </div>
+      <div id="garbage" ondrop="drop(event)" ondragover="allowDrop(event)"></div> 
+      <div id="garbage-image"><i class="fas fa-trash-alt fa-2x"></i></div>
+    </div>
+
+    <div class="container">
+      <h1>Diary</h1>
+      <br><br>
+      <div class="d-flex content-container">
+        <div class="d-flex flex-shrink-1 flex-column justify-content-between sticker-dropzone" style="height:200px;">
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+
+        <div class="flex-grow-1">
+          <div class="d-flex flex-column" style="height:200px;">
+            <div>
+              <b>October 25, 2021</b>
+            </div>
+            <div class="mood-description">
+              <i class="fas fa-smile fa-5x" style="color: #f4a261"></i>
+            </div>
+            <div class="notes" id="notes" contenteditable="false">
+              Today was a good day! I hung out with my friends and ate cookies.
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-shrink-1 flex-column justify-content-between sticker-dropzone" style="height:200px;">
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="d-flex content-container">
+        <div class="d-flex flex-shrink-1 flex-column justify-content-between sticker-dropzone" style="height:200px;">
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+
+        <div class="flex-grow-1">
+          <div class="d-flex flex-column" style="height:200px;">
+            <div>
+              <b>October 23, 2021</b>
+            </div>
+            <div class="mood-description">
+              <i class="fas fa-meh fa-5x" style="color: #e9c46a"></i>
+            </div>
+            <div class="notes" id="notes" contenteditable="false">
+              I didn't do anything today. I was bored.
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-shrink-1 flex-column justify-content-between sticker-dropzone" style="height:200px;">
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+          <div class="sticker-drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="diary-dirman.js"></script>
+    <script src="https://kit.fontawesome.com/5ab37e5eb9.js" crossorigin="anonymous"></script>
+  </body>
+</html>

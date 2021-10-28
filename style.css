@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+body {
+    background-color: #eee;
+}
+
+.navbar {
+    z-index: 200;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+h1 {
+    font-family: Helvetica Neue;
+    text-align: center;
+    size: 40px;
+}
+
+.container{
+    text-align: center;
+    size: 20px;
+    font-family: Helvetica Neue;
+    width: 80vw;
+    padding: 30px;
+}
+
