@@ -43,7 +43,6 @@
   margin: 0 auto;
 }
 
-/* The actual popup (appears on top) */
 .popup {
   width: 400px !important;
   transform: translate(-50%, -50%);
