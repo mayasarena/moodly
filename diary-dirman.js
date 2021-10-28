@@ -49,18 +49,21 @@ function drop(event) {
 // toggle edit mode
 const garb = document.getElementById("garbage");
 const garbImg = document.getElementById("garbage-image");
-const editNotes = document.getElementById("notes");
+const editNotes1 = document.getElementById("notes1");
+const editNotes2 = document.getElementById("notes2");
 const stickerContainer =  document.getElementById("sticker-container");
 const btn = document.getElementById("toggle");
 btn.onclick = function() {
     if (stickerContainer.style.display !== "block")
     {
-        editNotes.contentEditable = true;
+        editNotes1.contentEditable = true;
+        editNotes2.contentEditable = true;
         stickerContainer.style.display = "block";
         garb.style.display = "block";
         garbImg.style.display = "block";
     } else {
-        editNotes.contentEditable = false;
+        editNotes1.contentEditable = false;
+        editNotes2.contentEditable = false;
         stickerContainer.style.display = "none";
         garb.style.display = "none";
         garbImg.style.display = "none";
